@@ -1,3 +1,4 @@
+
 # Maven
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
@@ -14,10 +15,11 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
+  
+    goals: 'clean compile' 
     options: '-DskipTests'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'mvn compile'
